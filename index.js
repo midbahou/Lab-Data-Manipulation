@@ -1,3 +1,6 @@
+
+// ======= Part 1: Math Problems ===============
+
 // The initial numbers that must be verified.
 const n1 = 10;
 const n2 = 15;
@@ -59,5 +62,59 @@ let remaining = result % n4; // 0
 console.log("this is the remainder:", remaining);
 
 // Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
-let isUnder25 = n1 < 25 || n2 < 25 || n3 < 25 || n4 < 25;
+let isUnder25 = n1 < 25 && n2 < 25 && n3 < 25 && n4 < 25;
 console.log("is it under 25:", isUnder25);
+
+
+// ================== Part 2: Practical Math ==========================
+                // The distance of the trip, in total, is 1,500 miles.
+                // Your car’s fuel efficiency is as follows:
+                // At 55 miles per hour, you get 30 miles per gallon.
+                // At 60 miles per hour, you get 28 miles per gallon.
+                // At 75 miles per hour, you get 23 miles per gallon.
+                // You have a fuel budget of $175.
+                // The average cost of fuel is $3 per gallon.
+
+// How many gallons of fuel will you need for the entire trip?
+// so in case to do that, we have to calculate it for each speed separatly (55, 60 and 75 miles per hour)
+// For a speed of 55 miles per hour (30 miles per gallon)
+let totalDistance = 1500;
+let fuelFor55 = totalDistance / 30;
+console.log("This is the total gallons of fuel needed when traveling 55 miles per hour:",fuelFor55, "gallons");
+
+// For a speed of 60 miles per hour (28 miles per gallon)
+let fuelFor60 = totalDistance / 28;
+console.log("This is the total gallons of fuel needed when traveling 55 miles per hour:",fuelFor60, "gallons");
+
+// For a speed of 75 miles per hour (23 miles per gallon)
+let fuelFor75 = totalDistance / 23;
+console.log("This is the total gallons of fuel needed when traveling 55 miles per hour:", fuelFor75, "gallons");
+
+
+// Will your budget be enough to cover the fuel expense?
+// For a speed of 55 miles per hour (30 miles per gallon)
+const budget = 175;
+let fuelExpense55 = fuelFor55 * 3;
+console.log("is my budget be enough to cover the fuel expense", "$" + fuelExpense55, fuelExpense55 <= budget);
+
+// For a speed of 60 miles per hour (28 miles per gallon)
+let fuelExpense60 = fuelFor60 * 3;
+console.log("is my budget be enough to cover the fuel expense", "$" + fuelExpense60, fuelExpense60 <= budget);
+
+// For a speed of 75 miles per hour (23 miles per gallon)
+let fuelExpense75 = fuelFor75 * 3;
+console.log("is my budget be enough to cover the fuel expense", "$" + fuelExpense75, fuelExpense75 <= budget);
+
+
+// How long will the trip take, in hours?
+// For a speed of 55 miles per hour
+let tripTime55 = totalDistance / 55;
+console.log("The time the trip it will take for a speed of 55 m/h is:", tripTime55, "hours");
+
+// For a speed of 60 miles per hour
+let tripTime60 = totalDistance / 60;
+console.log("The time the trip it will take for a speed of 60 m/h is:", tripTime60, "hours");
+
+// For a speed of 75 miles per hour 
+let tripTime75 = totalDistance / 75;
+console.log("The time the trip it will take for a speed of 75 m/h is:", tripTime75, "hours");
